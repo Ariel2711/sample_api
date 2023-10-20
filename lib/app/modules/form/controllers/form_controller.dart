@@ -29,13 +29,12 @@ class FormController extends GetxController {
     return User;
   }
 
-  Future<void> storeUser(User user, bool isUpdate) async {
+  Future storeUser(User user, bool isUpdate) async {
     try {
       user = controllerToModel(user);
-      !isUpdate
+      isUpdate == false
           ? await serviceApi.createUser(user)
           : await serviceApi.updateUser(user);
-
       Get.back();
       Get.snackbar('Success', 'User berhasil disimpan');
     } catch (e) {

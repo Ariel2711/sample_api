@@ -23,10 +23,7 @@ class HomeView extends GetView<HomeController> {
                     future: controller.loadUsers(),
                     builder: (context, snapshot) => snapshot.connectionState ==
                             ConnectionState.waiting
-                        ? Center(
-                            child: CircularProgressIndicator(
-                            color: Colors.purple,
-                          ))
+                        ? Center(child: CircularProgressIndicator())
                         : Container(
                             height: Get.height * 0.8,
                             child: GridView.builder(

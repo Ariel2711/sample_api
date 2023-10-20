@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:sample_api/app/data/user_model.dart';
 import 'package:sample_api/app/data/service_api.dart';

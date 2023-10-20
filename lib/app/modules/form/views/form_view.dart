@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -37,7 +39,7 @@ class FormView extends GetView<FormController> {
                           : controller.checkIsInt(value) == false
                               ? 'Wrong Value'
                               : null,
-                      decoration: InputDecoration(label: Text("Nama")),
+                      decoration: InputDecoration(label: Text("Umur")),
                     ),
                     SizedBox(
                       height: 10,

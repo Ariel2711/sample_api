@@ -28,7 +28,7 @@ class ServiceApi {
     }
   }
 
-  Future<void> createUser(User user) async {
+  Future createUser(User user) async {
     var res = await http.post(
       Uri.parse('$apiUrl'),
       headers: <String, String>{
@@ -44,7 +44,7 @@ class ServiceApi {
     }
   }
 
-  Future<void> updateUser(User user) async {
+  Future updateUser(User user) async {
     var res = await http.put(
       Uri.parse('$apiUrl/${user.id}'),
       headers: <String, String>{
@@ -60,7 +60,7 @@ class ServiceApi {
     }
   }
 
-  Future<void> deleteUser(String id) async {
+  Future deleteUser(String id) async {
     var res = await http.get(Uri.parse('$apiUrl/$id'));
     if (res.statusCode == 200) {
       print(res.body);
